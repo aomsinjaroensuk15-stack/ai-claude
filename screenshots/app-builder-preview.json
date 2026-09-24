@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "AI Creator",
+      "hasCanvas": false,
+      "bodyTextLen": 181,
+      "bodyTextHash": "3deddac19febfde92d87d335d43ff28032cbc32753a3265bc39a0669570114b9",
+      "bodyTextPrefix": "AI Creator แชทใหม่ ยังไม่มีประวัติแชท แชทใหม่ unikey-router AI C",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "AI Creator",
+      "hasCanvas": false,
+      "bodyTextLen": 167,
+      "bodyTextHash": "91b8ad6ee6ec0befa28295d28d29cc462eac17a812f0cfe2a6eddd79df6b7a30",
+      "bodyTextPrefix": "AI Creator แชทใหม่ ยังไม่มีประวัติแชท แชทใหม่ AI Creator เปิดการ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

@@ -1,0 +1,250 @@
+﻿2026-09-19T13:26:08.076345872Z Error: Already connected to a transport. Call close() before connecting to a new transport, or use a separate Protocol instance per connection.
+2026-09-19T13:26:08.076350782Z     at Server.connect (file:///opt/render/project/src/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/protocol.js:217:19)
+2026-09-19T13:26:08.076354882Z     at file:///opt/render/project/src/node_modules/supergateway/dist/gateways/stdioToSse.js:58:22
+2026-09-19T13:26:08.076359022Z     at Layer.handle [as handle_request] (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/layer.js:95:5)
+2026-09-19T13:26:08.076379433Z     at next (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/route.js:149:13)
+2026-09-19T13:26:08.076382833Z     at Route.dispatch (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/route.js:119:3)
+2026-09-19T13:26:08.076385543Z     at Layer.handle [as handle_request] (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/layer.js:95:5)
+2026-09-19T13:26:08.076388403Z     at /opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/index.js:284:15
+2026-09-19T13:26:08.076390863Z     at router.process_params (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/index.js:346:12)
+2026-09-19T13:26:08.076393383Z     at next (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/index.js:280:10)
+2026-09-19T13:26:08.076396123Z     at jsonParser (/opt/render/project/src/node_modules/supergateway/node_modules/body-parser/lib/types/json.js:117:7)
+2026-09-19T13:26:08.076398633Z 
+2026-09-19T13:26:08.076401383Z Node.js v24.21.0
+2026-09-19T13:26:15.996305414Z ==> Running 'npx supergateway --port $PORT --no-auth --stdio "npx -y @modelcontextprotocol/server-github"'
+2026-09-19T13:26:22.828586709Z [supergateway] Starting...
+2026-09-19T13:26:22.828613319Z [supergateway] Supergateway is supported by Supermachine (hosted MCPs) - https://supermachine.ai
+2026-09-19T13:26:22.828618009Z [supergateway]   - outputTransport: sse
+2026-09-19T13:26:22.828622829Z [supergateway]   - Headers: (none)
+2026-09-19T13:26:22.828625409Z [supergateway]   - port: 10000
+2026-09-19T13:26:22.828628109Z [supergateway]   - stdio: npx -y @modelcontextprotocol/server-github
+2026-09-19T13:26:22.828630529Z [supergateway]   - ssePath: /sse
+2026-09-19T13:26:22.82863296Z [supergateway]   - messagePath: /message
+2026-09-19T13:26:22.82863528Z [supergateway]   - CORS: disabled
+2026-09-19T13:26:22.82863774Z [supergateway]   - Health endpoints: (none)
+2026-09-19T13:26:22.986174366Z [supergateway] Listening on port 10000
+2026-09-19T13:26:22.987118154Z [supergateway] SSE endpoint: http://localhost:10000/sse
+2026-09-19T13:26:22.987126534Z [supergateway] POST messages: http://localhost:10000/message
+2026-09-19T13:26:28.491827441Z [supergateway] Child stderr: GitHub MCP Server running on stdio
+2026-09-19T13:26:28.491851252Z 
+2026-09-19T13:28:02.042526538Z [supergateway] New SSE connection from ::1
+2026-09-19T13:28:02.91415286Z [supergateway] POST to SSE transport (session 9292f0ce-8bce-4d28-a40a-5f2c023f8ec9)
+2026-09-19T13:28:02.932061422Z [supergateway] SSE → Child (session 9292f0ce-8bce-4d28-a40a-5f2c023f8ec9): {"jsonrpc":"2.0","id":222636489,"method":"initialize","params":{"_meta":{"traceparent":"00-0ca93e056f6b7c017f41e738f824735f-16dcdac08d30c953-01"},"protocolVersion":"2025-11-25","capabilities":{"extensions":{"io.modelcontextprotocol/ui":{"mimeTypes":["text/html;profile=mcp-app"]}}},"clientInfo":{"name":"mcp","version":"0.1.0"}}}
+2026-09-19T13:28:02.992192225Z [supergateway] Child → SSE: {
+2026-09-19T13:28:02.992208486Z   result: {
+2026-09-19T13:28:02.992213746Z     protocolVersion: '2024-11-05',
+2026-09-19T13:28:02.992217636Z     capabilities: { tools: {} },
+2026-09-19T13:28:02.992222256Z     serverInfo: { name: 'github-mcp-server', version: '0.6.2' }
+2026-09-19T13:28:02.992226096Z   },
+2026-09-19T13:28:02.992230526Z   jsonrpc: '2.0',
+2026-09-19T13:28:02.992234366Z   id: 222636489
+2026-09-19T13:28:02.992238556Z }
+2026-09-19T13:28:03.263739884Z [supergateway] SSE connection closed (session 9292f0ce-8bce-4d28-a40a-5f2c023f8ec9)
+2026-09-19T13:28:03.263775735Z [supergateway] Client disconnected (session 9292f0ce-8bce-4d28-a40a-5f2c023f8ec9)
+2026-09-19T13:28:04.691785812Z [supergateway] New SSE connection from ::1
+2026-09-19T13:28:04.693880571Z file:///opt/render/project/src/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/protocol.js:217
+2026-09-19T13:28:04.693894421Z             throw new Error('Already connected to a transport. Call close() before connecting to a new transport, or use a separate Protocol instance per connection.');
+2026-09-19T13:28:04.693901411Z                   ^
+2026-09-19T13:28:04.693905751Z 
+2026-09-19T13:28:04.693910451Z Error: Already connected to a transport. Call close() before connecting to a new transport, or use a separate Protocol instance per connection.
+2026-09-19T13:28:04.693914861Z     at Server.connect (file:///opt/render/project/src/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/protocol.js:217:19)
+2026-09-19T13:28:04.693918431Z     at file:///opt/render/project/src/node_modules/supergateway/dist/gateways/stdioToSse.js:58:22
+2026-09-19T13:28:04.693922031Z     at Layer.handle [as handle_request] (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/layer.js:95:5)
+2026-09-19T13:28:04.693942872Z     at next (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/route.js:149:13)
+2026-09-19T13:28:04.693946092Z     at Route.dispatch (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/route.js:119:3)
+2026-09-19T13:28:04.693948752Z     at Layer.handle [as handle_request] (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/layer.js:95:5)
+2026-09-19T13:28:04.693951752Z     at /opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/index.js:284:15
+2026-09-19T13:28:04.693954142Z     at router.process_params (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/index.js:346:12)
+2026-09-19T13:28:04.693956442Z     at next (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/index.js:280:10)
+2026-09-19T13:28:04.693958722Z     at jsonParser (/opt/render/project/src/node_modules/supergateway/node_modules/body-parser/lib/types/json.js:117:7)
+2026-09-19T13:28:04.693960972Z 
+2026-09-19T13:28:04.693963482Z Node.js v24.21.0
+2026-09-19T13:28:26.584635515Z ==> Running 'npx supergateway --port $PORT --no-auth --stdio "npx -y @modelcontextprotocol/server-github"'
+2026-09-19T13:28:34.183926559Z [supergateway] Starting...
+2026-09-19T13:28:34.184023181Z [supergateway] Supergateway is supported by Supermachine (hosted MCPs) - https://supermachine.ai
+2026-09-19T13:28:34.184334126Z [supergateway]   - outputTransport: sse
+2026-09-19T13:28:34.1845477Z [supergateway]   - Headers: (none)
+2026-09-19T13:28:34.18456378Z [supergateway]   - port: 10000
+2026-09-19T13:28:34.184656422Z [supergateway]   - stdio: npx -y @modelcontextprotocol/server-github
+2026-09-19T13:28:34.184661922Z [supergateway]   - ssePath: /sse
+2026-09-19T13:28:34.184669342Z [supergateway]   - messagePath: /message
+2026-09-19T13:28:34.184779484Z [supergateway]   - CORS: disabled
+2026-09-19T13:28:34.185858615Z [supergateway]   - Health endpoints: (none)
+2026-09-19T13:28:34.379081329Z [supergateway] Listening on port 10000
+2026-09-19T13:28:34.380151479Z [supergateway] SSE endpoint: http://localhost:10000/sse
+2026-09-19T13:28:34.380162919Z [supergateway] POST messages: http://localhost:10000/message
+2026-09-19T13:28:40.074985911Z [supergateway] Child stderr: GitHub MCP Server running on stdio
+2026-09-19T13:28:40.075015141Z 
+2026-09-19T13:30:58.107561028Z ==> Detected service running on port 10000
+2026-09-19T13:30:59.222306337Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-09-19T13:35:33.736948811Z ==> Deploying...
+2026-09-19T13:35:33.969754858Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-09-19T13:35:42.799217677Z ==> Running 'npx supergateway --port $PORT --no-auth --stdio "npx -y @modelcontextprotocol/server-github"'
+2026-09-19T13:35:50.29825136Z [supergateway] Starting...
+2026-09-19T13:35:50.298442824Z [supergateway] Supergateway is supported by Supermachine (hosted MCPs) - https://supermachine.ai
+2026-09-19T13:35:50.298452175Z [supergateway]   - outputTransport: sse
+2026-09-19T13:35:50.298835862Z [supergateway]   - Headers: (none)
+2026-09-19T13:35:50.298845763Z [supergateway]   - port: 10000
+2026-09-19T13:35:50.298874653Z [supergateway]   - stdio: npx -y @modelcontextprotocol/server-github
+2026-09-19T13:35:50.298915974Z [supergateway]   - ssePath: /sse
+2026-09-19T13:35:50.299183679Z [supergateway]   - messagePath: /message
+2026-09-19T13:35:50.29919497Z [supergateway]   - CORS: disabled
+2026-09-19T13:35:50.29919808Z [supergateway]   - Health endpoints: (none)
+2026-09-19T13:35:50.494237121Z [supergateway] Listening on port 10000
+2026-09-19T13:35:50.494270812Z [supergateway] SSE endpoint: http://localhost:10000/sse
+2026-09-19T13:35:50.494275852Z [supergateway] POST messages: http://localhost:10000/message
+2026-09-19T13:35:54.724772553Z ==> Your service is live 🎉
+2026-09-19T13:35:54.979299956Z ==> 
+2026-09-19T13:35:54.982287052Z ==> ///////////////////////////////////////////////////////////
+2026-09-19T13:35:54.984661084Z ==> 
+2026-09-19T13:35:54.986895184Z ==> Available at your primary URL https://my-github-mcp-62ov.onrender.com
+2026-09-19T13:35:54.989070452Z ==> 
+2026-09-19T13:35:54.99214749Z ==> ///////////////////////////////////////////////////////////
+2026-09-19T13:35:56.49649411Z [supergateway] Child stderr: GitHub MCP Server running on stdio
+2026-09-19T13:35:56.49652952Z 
+2026-09-19T13:36:24.489688074Z ==> Deploying...
+2026-09-19T13:36:24.731702754Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-09-19T13:36:40.462845155Z ==> Running 'npx -y supergateway --port ${PORT:-10000} --no-auth --logLevel info --stdio "npx -y @modelcontextcontextprotocol/server-github" || npx -y supergateway --port $PORT --no-auth --stdio "npx -y @modelcontextprotocol/server-github"'
+2026-09-19T13:36:42.285326674Z [supergateway] New SSE connection from ::1
+2026-09-19T13:36:42.588025108Z [supergateway] POST to SSE transport (session d10bcdf8-981c-43a3-a0d3-3f705e00b65d)
+2026-09-19T13:36:42.596204656Z [supergateway] SSE → Child (session d10bcdf8-981c-43a3-a0d3-3f705e00b65d): {"jsonrpc":"2.0","id":1040126169,"method":"initialize","params":{"_meta":{"traceparent":"00-03d954af0452c63e5b21f542094ac659-fab7f02f60380358-01"},"protocolVersion":"2025-11-25","capabilities":{"extensions":{"io.modelcontextprotocol/ui":{"mimeTypes":["text/html;profile=mcp-app"]}}},"clientInfo":{"name":"mcp","version":"0.1.0"}}}
+2026-09-19T13:36:42.600512544Z [supergateway] Child → SSE: {
+2026-09-19T13:36:42.600528324Z   result: {
+2026-09-19T13:36:42.600535725Z     protocolVersion: '2024-11-05',
+2026-09-19T13:36:42.600541394Z     capabilities: { tools: {} },
+2026-09-19T13:36:42.600549755Z     serverInfo: { name: 'github-mcp-server', version: '0.6.2' }
+2026-09-19T13:36:42.600555355Z   },
+2026-09-19T13:36:42.600559745Z   jsonrpc: '2.0',
+2026-09-19T13:36:42.600563375Z   id: 1040126169
+2026-09-19T13:36:42.600566915Z }
+2026-09-19T13:36:42.84183018Z [supergateway] SSE connection closed (session d10bcdf8-981c-43a3-a0d3-3f705e00b65d)
+2026-09-19T13:36:42.841980783Z [supergateway] Client disconnected (session d10bcdf8-981c-43a3-a0d3-3f705e00b65d)
+2026-09-19T13:36:43.910728787Z [supergateway] New SSE connection from ::1
+2026-09-19T13:36:43.912576114Z file:///opt/render/project/src/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/protocol.js:217
+2026-09-19T13:36:43.912597765Z             throw new Error('Already connected to a transport. Call close() before connecting to a new transport, or use a separate Protocol instance per connection.');
+2026-09-19T13:36:43.912608855Z                   ^
+2026-09-19T13:36:43.912613395Z 
+2026-09-19T13:36:43.912618385Z Error: Already connected to a transport. Call close() before connecting to a new transport, or use a separate Protocol instance per connection.
+2026-09-19T13:36:43.912623535Z     at Server.connect (file:///opt/render/project/src/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/protocol.js:217:19)
+2026-09-19T13:36:43.912627685Z     at file:///opt/render/project/src/node_modules/supergateway/dist/gateways/stdioToSse.js:58:22
+2026-09-19T13:36:43.912632015Z     at Layer.handle [as handle_request] (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/layer.js:95:5)
+2026-09-19T13:36:43.912660056Z     at next (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/route.js:149:13)
+2026-09-19T13:36:43.912663846Z     at Route.dispatch (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/route.js:119:3)
+2026-09-19T13:36:43.912666666Z     at Layer.handle [as handle_request] (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/layer.js:95:5)
+2026-09-19T13:36:43.912669336Z     at /opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/index.js:284:15
+2026-09-19T13:36:43.912672096Z     at router.process_params (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/index.js:346:12)
+2026-09-19T13:36:43.912675116Z     at next (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/index.js:280:10)
+2026-09-19T13:36:43.912678126Z     at jsonParser (/opt/render/project/src/node_modules/supergateway/node_modules/body-parser/lib/types/json.js:117:7)
+2026-09-19T13:36:43.912680616Z 
+2026-09-19T13:36:43.912683267Z Node.js v24.21.0
+2026-09-19T13:36:49.280830287Z ==> Running 'npx supergateway --port $PORT --no-auth --stdio "npx -y @modelcontextprotocol/server-github"'
+2026-09-19T13:36:49.564272785Z [supergateway] Starting...
+2026-09-19T13:36:49.564289795Z [supergateway] Supergateway is supported by Supermachine (hosted MCPs) - https://supermachine.ai
+2026-09-19T13:36:49.564295495Z [supergateway]   - outputTransport: sse
+2026-09-19T13:36:49.565537694Z [supergateway]   - Headers: (none)
+2026-09-19T13:36:49.565546584Z [supergateway]   - port: 10000
+2026-09-19T13:36:49.565550374Z [supergateway]   - stdio: npx -y @modelcontextcontextprotocol/server-github
+2026-09-19T13:36:49.565553484Z [supergateway]   - ssePath: /sse
+2026-09-19T13:36:49.565586275Z [supergateway]   - messagePath: /message
+2026-09-19T13:36:49.565591405Z [supergateway]   - CORS: disabled
+2026-09-19T13:36:49.565594265Z [supergateway]   - Health endpoints: (none)
+2026-09-19T13:36:49.764732178Z [supergateway] Listening on port 10000
+2026-09-19T13:36:49.764747749Z [supergateway] SSE endpoint: http://localhost:10000/sse
+2026-09-19T13:36:49.76477395Z [supergateway] POST messages: http://localhost:10000/message
+2026-09-19T13:36:55.439434705Z ==> Your service is live 🎉
+2026-09-19T13:36:55.603567658Z [supergateway] Child stderr: npm error code E404
+2026-09-19T13:36:55.603587199Z 
+2026-09-19T13:36:55.603738392Z [supergateway] Child stderr: npm error 404 Not Found - GET https://registry.npmjs.org/@modelcontextcontextprotocol%2fserver-github - Not found
+2026-09-19T13:36:55.603751103Z npm error 404
+2026-09-19T13:36:55.603755772Z 
+2026-09-19T13:36:55.604782476Z [supergateway] Child stderr: npm error 404  The requested resource '@modelcontextcontextprotocol/server-github@*' could not be found or you do not have permission to access it.
+2026-09-19T13:36:55.604790967Z npm error 404
+2026-09-19T13:36:55.604795447Z npm error 404 Note that you can also install from a
+2026-09-19T13:36:55.604799527Z npm error 404 tarball, folder, http url, or git url.
+2026-09-19T13:36:55.604803357Z 
+2026-09-19T13:36:55.655736429Z [supergateway] Child stderr: npm error A complete log of this run can be found in: /opt/render/.cache/_logs/2026-09-19T13_36_50_459Z-debug-0.log
+2026-09-19T13:36:55.655752369Z 
+2026-09-19T13:36:55.679100878Z ==> 
+2026-09-19T13:36:55.682092054Z ==> ///////////////////////////////////////////////////////////
+2026-09-19T13:36:55.684885475Z ==> 
+2026-09-19T13:36:55.687630576Z ==> Available at your primary URL https://my-github-mcp-62ov.onrender.com
+2026-09-19T13:36:55.690282865Z ==> 
+2026-09-19T13:36:55.693009365Z ==> ///////////////////////////////////////////////////////////
+2026-09-19T13:36:55.726435606Z [supergateway] New SSE connection from ::1
+2026-09-19T13:36:55.965687323Z [supergateway] Child exited: code=1, signal=null
+2026-09-19T13:37:03.663340519Z [supergateway] Starting...
+2026-09-19T13:37:03.66336701Z [supergateway] Supergateway is supported by Supermachine (hosted MCPs) - https://supermachine.ai
+2026-09-19T13:37:03.66337257Z [supergateway]   - outputTransport: sse
+2026-09-19T13:37:03.66337672Z [supergateway]   - Headers: (none)
+2026-09-19T13:37:03.66338083Z [supergateway]   - port: 10000
+2026-09-19T13:37:03.66338557Z [supergateway]   - stdio: npx -y @modelcontextprotocol/server-github
+2026-09-19T13:37:03.66338975Z [supergateway]   - ssePath: /sse
+2026-09-19T13:37:03.66339391Z [supergateway]   - messagePath: /message
+2026-09-19T13:37:03.66339801Z [supergateway]   - CORS: disabled
+2026-09-19T13:37:03.66340223Z [supergateway]   - Health endpoints: (none)
+2026-09-19T13:37:03.76678146Z [supergateway] Listening on port 10000
+2026-09-19T13:37:03.766828451Z [supergateway] SSE endpoint: http://localhost:10000/sse
+2026-09-19T13:37:03.766833381Z [supergateway] POST messages: http://localhost:10000/message
+2026-09-19T13:37:06.092476717Z [supergateway] New SSE connection from ::1
+2026-09-19T13:37:06.557321005Z [supergateway] POST to SSE transport (session 2ae16530-6606-44f9-a4a6-86d16d8141bb)
+2026-09-19T13:37:06.762776924Z [supergateway] SSE → Child (session 2ae16530-6606-44f9-a4a6-86d16d8141bb): {"jsonrpc":"2.0","id":379030809,"method":"initialize","params":{"_meta":{"traceparent":"00-0a5b0cc5115ab5e5808d48c2594eee17-e6fc99353bd5b88d-01"},"protocolVersion":"2025-11-25","capabilities":{"extensions":{"io.modelcontextprotocol/ui":{"mimeTypes":["text/html;profile=mcp-app"]}}},"clientInfo":{"name":"mcp","version":"0.1.0"}}}
+2026-09-19T13:37:09.482241983Z [supergateway] New SSE connection from ::1
+2026-09-19T13:37:09.482817386Z file:///opt/render/project/src/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/protocol.js:217
+2026-09-19T13:37:09.482826986Z             throw new Error('Already connected to a transport. Call close() before connecting to a new transport, or use a separate Protocol instance per connection.');
+2026-09-19T13:37:09.482832956Z                   ^
+2026-09-19T13:37:09.482837177Z 
+2026-09-19T13:37:09.482843866Z Error: Already connected to a transport. Call close() before connecting to a new transport, or use a separate Protocol instance per connection.
+2026-09-19T13:37:09.482850547Z     at Server.connect (file:///opt/render/project/src/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/protocol.js:217:19)
+2026-09-19T13:37:09.482855687Z     at file:///opt/render/project/src/node_modules/supergateway/dist/gateways/stdioToSse.js:58:22
+2026-09-19T13:37:09.482860517Z     at Layer.handle [as handle_request] (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/layer.js:95:5)
+2026-09-19T13:37:09.482865217Z     at next (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/route.js:149:13)
+2026-09-19T13:37:09.482870127Z     at Route.dispatch (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/route.js:119:3)
+2026-09-19T13:37:09.482875107Z     at Layer.handle [as handle_request] (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/layer.js:95:5)
+2026-09-19T13:37:09.482879907Z     at /opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/index.js:284:15
+2026-09-19T13:37:09.482884267Z     at router.process_params (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/index.js:346:12)
+2026-09-19T13:37:09.482889228Z     at next (/opt/render/project/src/node_modules/supergateway/node_modules/express/lib/router/index.js:280:10)
+2026-09-19T13:37:09.482893818Z     at jsonParser (/opt/render/project/src/node_modules/supergateway/node_modules/body-parser/lib/types/json.js:117:7)
+2026-09-19T13:37:09.482898178Z 
+2026-09-19T13:37:09.482902428Z Node.js v24.21.0
+2026-09-19T13:37:18.621004128Z ==> Running 'npx -y supergateway --port ${PORT:-10000} --no-auth --logLevel info --stdio "npx -y @modelcontextcontextprotocol/server-github" || npx -y supergateway --port $PORT --no-auth --stdio "npx -y @modelcontextprotocol/server-github"'
+2026-09-19T13:37:25.209390222Z [supergateway] Starting...
+2026-09-19T13:37:25.209549576Z [supergateway] Supergateway is supported by Supermachine (hosted MCPs) - https://supermachine.ai
+2026-09-19T13:37:25.209556006Z [supergateway]   - outputTransport: sse
+2026-09-19T13:37:25.209918524Z [supergateway]   - Headers: (none)
+2026-09-19T13:37:25.209940605Z [supergateway]   - port: 10000
+2026-09-19T13:37:25.209952325Z [supergateway]   - stdio: npx -y @modelcontextcontextprotocol/server-github
+2026-09-19T13:37:25.209990516Z [supergateway]   - ssePath: /sse
+2026-09-19T13:37:25.210036577Z [supergateway]   - messagePath: /message
+2026-09-19T13:37:25.210123529Z [supergateway]   - CORS: disabled
+2026-09-19T13:37:25.21019164Z [supergateway]   - Health endpoints: (none)
+2026-09-19T13:37:25.406821256Z [supergateway] Listening on port 10000
+2026-09-19T13:37:25.406929358Z [supergateway] SSE endpoint: http://localhost:10000/sse
+2026-09-19T13:37:25.406933688Z [supergateway] POST messages: http://localhost:10000/message
+2026-09-19T13:37:29.83224569Z [supergateway] Child stderr: npm error code E404
+2026-09-19T13:37:29.83227153Z 
+2026-09-19T13:37:29.832451164Z [supergateway] Child stderr: npm error 404 Not Found - GET https://registry.npmjs.org/@modelcontextcontextprotocol%2fserver-github - Not found
+2026-09-19T13:37:29.832460665Z npm error 404
+2026-09-19T13:37:29.832466715Z npm error 404  The requested resource '@modelcontextcontextprotocol/server-github@*' could not be found or you do not have permission to access it.
+2026-09-19T13:37:29.832471685Z npm error 404
+2026-09-19T13:37:29.832476165Z 
+2026-09-19T13:37:29.906720154Z [supergateway] Child stderr: npm error 404 Note that you can also install from a
+2026-09-19T13:37:29.906744944Z npm error 404 tarball, folder, http url, or git url.
+2026-09-19T13:37:29.906796345Z 
+2026-09-19T13:37:29.907938752Z [supergateway] Child stderr: npm error A complete log of this run can be found in: /opt/render/.cache/_logs/2026-09-19T13_37_25_908Z-debug-0.log
+2026-09-19T13:37:29.907950842Z 
+2026-09-19T13:37:30.007935383Z [supergateway] Child exited: code=1, signal=null
+2026-09-19T13:37:36.814292377Z [supergateway] Starting...
+2026-09-19T13:37:36.814486651Z [supergateway] Supergateway is supported by Supermachine (hosted MCPs) - https://supermachine.ai
+2026-09-19T13:37:36.814494841Z [supergateway]   - outputTransport: sse
+2026-09-19T13:37:36.81487981Z [supergateway]   - Headers: (none)
+2026-09-19T13:37:36.814969562Z [supergateway]   - port: 10000
+2026-09-19T13:37:36.815113956Z [supergateway]   - stdio: npx -y @modelcontextprotocol/server-github
+2026-09-19T13:37:36.815122866Z [supergateway]   - ssePath: /sse
+2026-09-19T13:37:36.815279229Z [supergateway]   - messagePath: /message
+2026-09-19T13:37:36.815288389Z [supergateway]   - CORS: disabled
+2026-09-19T13:37:36.815381942Z [supergateway]   - Health endpoints: (none)
+2026-09-19T13:37:37.010583734Z [supergateway] Listening on port 10000
+2026-09-19T13:37:37.010607654Z [supergateway] SSE endpoint: http://localhost:10000/sse
+2026-09-19T13:37:37.010611424Z [supergateway] POST messages: http://localhost:10000/message
+2026-09-19T13:37:42.407222653Z [supergateway] Child stderr: GitHub MCP Server running on stdio
+2026-09-19T13:37:42.407245093Z 
