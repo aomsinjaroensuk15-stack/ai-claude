@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ai-claude
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: NITRO_PRESET
+        value: render-com
